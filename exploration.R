@@ -56,7 +56,15 @@ valoresUnicos(df_detail)
 valoresUnicos(df_ubicacion)
 
 ##############################
+#1) adicional 1: 
+agg_tbl <- df_detail %>% group_by(DIANOMBRE, TURNO) %>% 
+  summarise(across(num_llamadas, sum))
 
+agg_tbl
+nrow(agg_tbl)
 
+new_wide_data <- agg_tbl |> 
+  pivot_wider(names_from = TURNO, values_from = num_llamadas)
+nrow(new_wide_data)
 
 
