@@ -45,7 +45,7 @@ head(df_ubicacion[,c("ZONA","AA_HH")])
 
 
 
-#4) Verificar valores únicos en cada columna
+#5) Verificar valores únicos en cada columna
 valoresUnicos <- function(df_){ 
   for (col in colnames(df_)) {
     unique_count <- length(unique(df_[[col]]))
@@ -67,4 +67,13 @@ new_wide_data <- agg_tbl |>
   pivot_wider(names_from = TURNO, values_from = num_llamadas)
 nrow(new_wide_data)
 
+df_detail
 
+
+#2)
+
+#3)
+
+#4)
+
+#5)
